@@ -1,4 +1,4 @@
-package Aula13;
+
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -17,8 +17,8 @@ public class JogodaVelha {
     private static Scanner leitor = new Scanner(System.in);
     private static Jogador jogador1, jogador2;
     private static long inicio;
-    private static Jogador[] listaJogadores = new Jogador[50];  //guardar todos os jogadores até o limite de 50
-    private static int quantidadeJogadores = 0; //para contar quantos jogadores estão cadastrados
+    private static Jogador[] listaJogadores = new Jogador[50];  
+    private static int quantidadeJogadores = 0; 
             
     
     //procedimento para desenhar o tabuleiro
@@ -178,7 +178,7 @@ public class JogodaVelha {
         System.out.println("Digite o nome do jogador 2");
         String nome_jogador2 = leitor.next();
         jogador2 = buscarJogador(nome_jogador2);
-        //a função buscarJogador cria novos registros e recupera registros já existentes
+        
     }
     
     //contagem do tempo da partida
@@ -191,7 +191,7 @@ public class JogodaVelha {
     
     //buscar e guardar os dados sobre os jogadores
     public static Jogador buscarJogador(String nome){
-        Jogador jogadorBuscado = null; //null representa um valor vazio
+        Jogador jogadorBuscado = null; 
         //verificar se ja existe o nome no registro
         for(int i=0;(i<quantidadeJogadores) && (jogadorBuscado==null);i++){
             if(listaJogadores[i]!=null && listaJogadores[i].nome.equalsIgnoreCase(nome)){   
